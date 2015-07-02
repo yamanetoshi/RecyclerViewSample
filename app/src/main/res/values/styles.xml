@@ -2,7 +2,9 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:colorBackground">@color/window_bg</item>
+
         <item name="colorPrimary">@color/brand_sub</item>
         <item name="colorPrimaryDark">@color/brand_sub</item>
         <item name="colorAccent">@color/brand_sub</item>

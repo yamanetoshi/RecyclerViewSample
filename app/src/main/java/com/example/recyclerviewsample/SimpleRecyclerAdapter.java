@@ -21,7 +21,7 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
 
     @Override
     public SimpleRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mLayoutInflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+        View view = mLayoutInflater.inflate(R.layout.list_item_card, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -42,7 +42,7 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
 
         public ViewHolder(View view) {
             super(view);
-            textView = (TextView) view.findViewById(android.R.id.text1);
+            textView = (TextView) view.findViewById(R.id.text1);
         }
     }
 }
