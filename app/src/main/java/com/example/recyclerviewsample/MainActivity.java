@@ -7,8 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -38,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        int padding = (int)(getResources().getDisplayMetrics().density * 8);
+//        mRecyclerView.setPadding(padding, 0, padding, 0);
+        mRecyclerView.addItemDecoration(new MarginDecoration(this));
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View header = inflater.inflate(R.layout.list_header_footer, mRecyclerView, false);
+        View footer = inflater.inflate(R.layout.list_header_footer, mRecyclerView, false);
 
         ArrayList<String> list = new ArrayList();
         for (int i = 0; i < 20; i++) {
