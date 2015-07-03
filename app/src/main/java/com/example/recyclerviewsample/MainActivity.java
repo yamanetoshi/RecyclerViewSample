@@ -42,12 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
         int padding = (int)(getResources().getDisplayMetrics().density * 8);
-//        mRecyclerView.setPadding(padding, 0, padding, 0);
-        mRecyclerView.addItemDecoration(new MarginDecoration(this));
-
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View header = inflater.inflate(R.layout.list_header_footer, mRecyclerView, false);
-        View footer = inflater.inflate(R.layout.list_header_footer, mRecyclerView, false);
+//        mRecyclerView.addItemDecoration(new MarginDecoration(this));
 
         ArrayList<String> list = new ArrayList();
         for (int i = 0; i < 20; i++) {
